@@ -488,9 +488,10 @@ fy(300, 600)
 
 </br>
 
- 파이썬에서 클래스는 클래스 키워드를 사용하며 함수를 만들 때 사용한 def를 통해 클래스 메서드 method 를 정의할 수 있다.    
- 먼저 ```__init__``` 메서드는 파이썬 클래스가 반드시 가져야하는 메서드로서 생성자 Constructor 역할을 수행하며 객체 Object가 만들어질 때 자동으로 한번만 호출된다.    
- 또한 파이썬에서는 메서드의 첫 번째 입력 파라미터로써 자기 자신을 나타내는 self를 반드시 써주어야 한다. self는 C++, java 언어의 this 처럼 자기 자신을 가리킨다.
+ 파이썬에서 ```클래스 class```는 ```클래스 class 키워드```를 사용하며, ```함수를 만들 때 사용한 def```를 통해 ```클래스 class 메서드 method```를 정의할 수 있다.    
+ 먼저 ```__init__ 메서드```는 파이썬 클래스가 반드시 가져야하는 메서드로서, ```생성자 Constructor``` 역할을 수행하며, ```객체 Object```가 만들어질 때 자동으로 한번만 호출된다.    
+</br>
+  또한 파이썬에서는 ```메서드의 첫 번째 입력 파라미터```로써, ```자기 자신을 나타내는 self```를 반드시 써주어야 한다. self는 C++, java 언어의 this 처럼 자기 자신을 가리킨다.
 
 * 파이썬 클래스 정의 및 기본 예제
 
@@ -529,10 +530,12 @@ print("current person object is ", obj.name)
 
 </br>
 
- 객체 obj를 생성하면 Person 클래스 생성자인 ```__init__``` 내에서 self.name = name이 실행된다. 여기서 self.name 은 클래스의 멤버 변수를 가리키며 C++이나 java와 달리 파이썬에서는 클래스 내에서 멤버 변수 선언을 별도로 하지 않아도 바로 사용할 수 있다.    
- name은 Person 클래스가 가지고 있는 인스턴스 instance 변수인데, 보다시피 객체 obj를 이용하여 바로 접근해서 값을 가져올 수 잇다. 이처럼 파이썬에서는 메서드와 멤버 member 변수 모두가 기본적으로 public으로 선언되기 때문에 외부에서 생성한 객체를 통하여 바로 접근해서 사용할 수 있다.
+ ```객체 obj```를 생성하면 Person 클래스 생성자인 ```__init__``` 내에서 ```self.name = name```이 실행된다. 여기서 ```self.name```은 클래스의 ```멤버 변수```를 가리키며, C++이나 java와 달리 파이썬에서는 클래스 내에서 멤버 변수 선언을 별도로 하지 않아도 바로 사용할 수 있다.    
+ ```name```은 Person 클래스가 가지고 있는 ```인스턴스 instance 변수```인데, 보다시피 ```객체 obj```를 이용하여 바로 접근해서 값을 가져올 수 있다. 이처럼 파이썬에서는 ```메서드```와 ```멤버 member 변수``` 모두가 기본적으로 ```public```으로 선언되기 때문에 외부에서 생성한 객체를 통하여 바로 접근해서 사용할 수 있다.
 
 </br>
+
+* 출처 : <https://www.youtube.com/watch?v=5Xy5Ju7hYo4&list=PLS8gIc2q83OjStGjdTF2LZtc0vefCAbnX&index=5>
 
 ```
 class Person :
@@ -567,11 +570,11 @@ print("Person count ==", Person.getCount())
 
 print(Person.count)
 ```
-&nbsp;&nbsp;&nbsp;&nbsp; PARKis initialized        
-&nbsp;&nbsp;&nbsp;&nbsp; KIMis initialized    
-&nbsp;&nbsp;&nbsp;&nbsp; PARKis working inABCDEF    
-&nbsp;&nbsp;&nbsp;&nbsp; KIMis sleeping    
-&nbsp;&nbsp;&nbsp;&nbsp; current person object is PARK ,  KIM    
+&nbsp;&nbsp;&nbsp;&nbsp; PARK is initialized        
+&nbsp;&nbsp;&nbsp;&nbsp; KIM is initialized    
+&nbsp;&nbsp;&nbsp;&nbsp; PARK is working in ABCDEF    
+&nbsp;&nbsp;&nbsp;&nbsp; KIM is sleeping    
+&nbsp;&nbsp;&nbsp;&nbsp; current person object is PARK, KIM    
 &nbsp;&nbsp;&nbsp;&nbsp; Person count == 2    
 &nbsp;&nbsp;&nbsp;&nbsp; 2    
 
@@ -595,8 +598,8 @@ obj = PrivateMemberTest("PARK", "KIM")
 
 print(obj.name1)
 print(obj.getNames())
-print(obj.__printNames())
-print(obj.__name2)
+print(obj.__printNames())  # error  
+print(obj.__name2)         # error
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp; initialized with PARK ,KIM    
@@ -653,6 +656,10 @@ obj.call_test()
 
  파이썬 리스트 변수에는 음수 인덱스와 슬라이스 기능이 있다는 것을 반드시 기억하자. 또한 학습 데이터 생성을 위해 자주 사용되는 List Comprehension을 잘 숙지해 놓으면 차후에 코드를 간결하게 구현할 수 있다.
 
+</br>
+
+그 밖의 개념
+
 * 예외 Exception
 
 ```
@@ -681,7 +688,7 @@ calc([1, 2])
 calc([1, 2, -100])
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp; list index out of range
+&nbsp;&nbsp;&nbsp;&nbsp; list index out of range     
 &nbsp;&nbsp;&nbsp;&nbsp; 0    
 &nbsp;&nbsp;&nbsp;&nbsp; Sum is minus    
 &nbsp;&nbsp;&nbsp;&nbsp; -97    
