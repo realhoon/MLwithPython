@@ -606,13 +606,13 @@ print(obj.__name2)         # error
 &nbsp;&nbsp;&nbsp;&nbsp; PARK    
 &nbsp;&nbsp;&nbsp;&nbsp; PARK KIM    
 &nbsp;&nbsp;&nbsp;&nbsp; ('PARK', 'KIM')    
-&nbsp;&nbsp;&nbsp;&nbsp; ---------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-<ipython-input-3-dbc15b89f7fb> in <cell line: 23>()
-     21 # print(obj.name2)
-     22 print(obj.getNames())
----> 23 print(obj.__printNames())
-     24 print(obj.__name2)
+&nbsp;&nbsp;&nbsp;&nbsp; ---------------------------------------------------------------------------    
+&nbsp;&nbsp;&nbsp;&nbsp; AttributeError                            Traceback (most recent call last)
+&nbsp;&nbsp;&nbsp;&nbsp; <ipython-input-3-dbc15b89f7fb> in <cell line: 23>()
+&nbsp;&nbsp;&nbsp;&nbsp;     21 # print(obj.name2)
+&nbsp;&nbsp;&nbsp;&nbsp;     22 print(obj.getNames())
+&nbsp;&nbsp;&nbsp;&nbsp;---> 23 print(obj.__printNames())
+&nbsp;&nbsp;&nbsp;&nbsp;     24 print(obj.__name2)
 
 AttributeError: 'PrivateMemberTest' object has no attribute '__printNames'    
 
