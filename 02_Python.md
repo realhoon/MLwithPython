@@ -1,6 +1,6 @@
 # 1. 파이썬 설치 및 jupyter notebook 실행
 
-* 아나콘다 배포판 : <https://www.anaconda.com/distribution/>
+* 아나콘다 배포판 : <https://www.anaconda.com/download>
 * 파이썬 버전 확인    
 ```> python --version```
 * 터미널 창에서 jupyter notebook 실행    
